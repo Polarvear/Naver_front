@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2단 레이아웃</title>
+
+<style>
+div {
+    border: 1px solid #ccc;
+}
+
+#container {
+    width: 960px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+#header {
+    display: flex;
+    padding:20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#contents {
+    width:620px;
+    padding:20px;
+    float: right;
+    margin-bottom: 20px;
+}
+
+#sidebar {
+    width: 220px;
+    padding: 20px;
+    float: left;
+    margin-bottom: 20px;
+    background: #eee;
+    margin-right: 1.4rem;
+}
+
+#footer {
+    clear: both;
+    padding:20px;
+}
+
+.center-div {
+    height: 30rem;
+    
+}
+
+@media screen and (max-width:320px){
+    .center-div {
+        position: absolute;
+    }
+}
+
+.side_main {
+    border: none;
+}
+
+.search-window {
+    float:right;
+    height: 80%;
+    
+}
+
+
+
+
+
+
+
+</style>
+
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div id="header">
+                <h1>사이트 제목
+                    <div class="search-window">
+                        <input >
+                    </div>
+                </h1>
+            </div>
+        </header>
+        <div class="side_main">
+            <div id="sidebar" class="center-div">
+                <h2>사이드 바</h2>
+                <ul>
+                    <li>국가의 세입·세출의 결산, 국가 및 법률이 정한 단체의 회계검사와 
+                        행정기관 및 공무원의 직무에 관한 감찰을 하기 위하여 대통령 소속하에 감사원을 둔다.</li>
+                </ul>
+            </div>
+            <section>
+                <div id="contents" class="center-div">
+                    <h2>본문</h2>
+                    <p>모든 국민은 고문을 받지 아니하며, 형사상 자기에게 불리한 진술을 강요당하지 아니한다. 
+                        다음의 선서를 한다. 국회는 국민의 보통·평등·직접·비밀선거에 의하여 선출된 국회의원으로 구성한다. 
+                        국군의 조직과 편성은 법률로 정한다. 대통령은 조약을 체결·비준하고, 
+                        외교사절을 신임·접수 또는 파견하며, 선전포고와 강화를 한다.</p>
+
+                    <p>헌법개정은 국회재적의원 과반수 또는 대통령의 발의로 제안된다. 모든 국민은 법률이 정하는 바에 의하여 공무담임권을 가진다.
+                        대통령은 내우·외환·천재·지변 또는 중대한 재정·경제상의 위기에 있어서 국가의 안전보장 또는 공공의 안녕질서를 유지하기
+                        위하여 긴급한 조치가 필요하고 국회의 집회를 기다릴 여유가 없을 때에 한하여 최소한으로 필요한 재정·경제상의 처분을
+                        하거나 이에 관하여 법률의 효력을 가지는 명령을 발할 수 있다..</p>
+                </div>
+            </section>
+        </div>        
+        <footer>
+         <div id="footer">
+            <h2>푸터</h2>
+            <p>국무회의는 정부의 권한에 속하는 중요한 정책을 심의한다. 감사원은 세입·세출의
+                결산을 매년 검
+                사하여 대통령과 차년도국회에 그 결과를 보고하여야 한다.</p>
+        </div> 
+        </footer>
+    </div>
+</body>
+</html>
