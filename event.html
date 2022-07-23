@@ -10,16 +10,26 @@
     <div class="div-container">동적 생성
         <button class="btn">생성</button>
     </div>
+
+
+
+
+
+
+
 <script>
 
-const btn = document.querySelector('.btn');
-const btn2 = document.querySelector('.div-container');
+const btn = document.getElementsByClassName('btn');
+const divTag = document.getElementsByClassName('.div-container');
 
 btn.addEventListener('click', (e) => {
     const newDiv = document.createElement('div');
-    const newText = document.createTextNode("동적 생성태그");
+    const newText = document.createTextNode("안녕하세요!");
+
     newDiv.appendChild(newText);
-    document.btn2.appendChild(newDiv);
+    document.divTag.appendChild(newDiv);
+
+
     
 },false)
 
