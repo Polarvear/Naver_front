@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+ <script>
+    // forEach, map, filter, reduce
+    a = [10, 11, 23, 11, 44, 45];
+
+    function forEach(predicate, thisArg) {
+        for(let i = 0; i < a.length; i++) {
+            predicate(a[i], i); //for 문을 돌면서 계속 호출함
+        }
+     }
+    // 첫번째 인자 필수
+     
+    a.forEach(function(v, i) { // 첫번쨰는 값이고 두번쨰는 인덱스 값이다.
+        console.log(v, i);
+    })
+
+
+ </script>   
+</body>
+</html>
