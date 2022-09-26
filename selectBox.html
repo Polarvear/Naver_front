@@ -36,10 +36,11 @@
 <style>
     select {
         width: 500px;
+        text-align: right;
     }
     .selectBox {
         height: 30px;
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         width: 164px;
         position: relative;
         overflow: hidden;
@@ -49,15 +50,15 @@
         pointer-events: none; /*중요*/
         box-sizing: border-box;
         width: 100%;
-        border: solid #5B6DCD 10px;
+        
         padding: 5px;
         background-origin: content-box;
         /* background-size: cover; */
         flex: 1;
         background-repeat: no-repeat;
         position: absolute;
-        background-image: url(/down-arrow.png);
-        border: 1px solid red;
+        background-image: url(../down-arrow.png);
+        border-right: 1px solid red;
         width: 50px;
     }
 </style>
@@ -83,7 +84,6 @@
         <option value="grape">grape</option>
         <option value="melon">melon</option>
     </select>
-
 
 </body>
 </html>
