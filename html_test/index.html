@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+    <!-- Google Tag Manager -->
+    <!-- <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })
+    (window,document,'script','dataLayer','GTM-5R259FM');
+    </script> -->
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <title>에이스 침대</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:site_name" content="에이스 캠페인 사이트" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="에이스 침대" />
+    <meta property="og:description" content="에이스 침대 IMC 캠페인" />
+    <meta property="og:url" content="" />
+    <meta name="twitter:card" content="summary">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="asset/css/main.css" />
+</head>
+<body>
+    <div id="wrap">
+        <!-- popup -->
+        <div class="gallery-dim"></div>
+        <div class="popup-layer">
+
+            <!-- step1 -->
+            <div class="popup-miracle popup">
+                <div class="step1 popup">
+                    <div class="bg">
+                        <img src="asset/img/popup/step1/bg.png"/>
+                    </div>
+
+                    <div class="popup-x-button"></div>
+
+                    <div class="step1-box button-box">
+                        <div class="photo-capture-button">
+                            <img src="asset/img/popup/step1/photo-capture.png" />
+                        </div>
+
+                        <div class="photo-load-button">
+                            <img src="asset/img/popup/step1/photo-load.png" />
+                        </div>
+                    </div>
+
+                    
+                    <div class="img-cover">
+
+                    </div>
+
+                </div>
+
+                <div class="step2 popup">
+                    <div class="bg">
+                        <div class="agree" value="0">
+                            <img src="asset/img/popup/step2/private-check.png" class="chk" value="0">
+                        </div>
+                        <img src="asset/img/popup/step2/bg.png"/>
+                    </div>
+
+                    <div class="popup-x-button"></div>
+
+                    <div class="step2-box button-box">
+                        <div class="button-prev">
+                            <img src="asset/img/popup/button-prev.png" />
+                        </div>
+
+                        <div class="button-next">
+                            <img src="asset/img/popup/button-next.png" />
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="step3 popup">
+                    <div class="bg">
+
+
+                        <canvas id="myCanvas" width="2048px" height="2048px">
+                        </canvas>
+                        <img src="asset/img/popup/step3/bg.png"/>
+                    </div>
+
+                    <div class="popup-x-button"></div>
+
+                    <div class="step3-box button-box">
+                        <div class="button-prev">
+                            <img src="asset/img/popup/button-prev.png" />
+                        </div>
+
+                        <div class="button-next">
+                            <img src="asset/img/popup/button-next.png" />
+                        </div>
+                        </div>
+                       
+                    <input type="file" class="selectFile" accept="image/*capture=camera" />
+                </div>
+
+                <!--step4-->
+                
+                <div class="step4 popup">
+                    <div class="bg">
+
+
+                        <canvas id="myCanvas1" width="2048px" height="2048px">
+                        </canvas>
+                        <img src="asset/img/popup/step4/bg.png"/>
+                    </div>
+
+                    <div class="popup-x-button"></div>
+
+                    <div class="step4-box button-box">
+                        <div class="button-prev">
+                            <img src="asset/img/popup/button-prev.png" />
+                        </div>
+
+                        <div class="button-next">
+                            <img src="asset/img/popup/button-next.png" />
+                        </div>
+                    </div>
+                    <!-- <input type="file" class="selectFile" accept="image/*capture=camera" /> -->
+                </div>
+
+
+
+
+                <div class="step5 popup">
+                    <div class="bg">
+
+
+                        <canvas id="myCanvas2" width="2048px" height="2048px">
+                        </canvas>
+                        <img src="asset/img/popup/step5/bg.png"/>
+                    </div>
+
+                    <div class="popup-x-button"></div>
+
+                    <div class="step5-box button-box">
+                        <div class="button-prev">
+                            <img src="asset/img/popup/button-prev.png" />
+                        </div>
+
+                        <div class="button-next">
+                            <img src="asset/img/popup/button-next.png" />
+                        </div>
+                    </div>
+                    <!-- <input type="file" class="selectFile" accept="image/*capture=camera" /> -->
+                </div>
+
+
+                
+
+                <div class="step6 popup">
+                    <div class="bg">
+
+
+                        <canvas id="myCanvas3" width="2048px" height="2048px">
+                        </canvas>
+                        <img src="asset/img/popup/step6/bg.png"/>
+                    </div>
+
+                    <div class="popup-x-button"></div>
+
+
+                    <div class="save-button-box">
+                        <div class="button-save">
+                            <img src="asset/img/popup/step6/photo-save.png" />
+                        </div>
+                    </div>
+
+                    <div class="step6-box button-box">
+                        <div class="button-prev">
+                            <img src="asset/img/popup/hashtag-copy.png" />
+                        </div>
+
+                        <div class="button-next">
+                            <img src="asset/img/popup/join-done.png" />
+                        </div>
+                    </div>
+                    <!-- <input type="file" class="selectFile" accept="image/*capture=camera" /> -->
+                </div>
+
+
+
+                
+
+                <div class="step7 popup">
+                    <div class="bg">
+
+
+                        <img src="asset/img/popup/step7/bg.png"/>
+                    </div>
+
+                    <div class="popup-x-button"></div>
+
+                    <div class="step7-box button-box">
+                        <div class="button-next">
+                            <img src="asset/img/popup/step7/ok-button.png" />
+                        </div>
+                    </div>
+                    <!-- <input type="file" class="selectFile" accept="image/*capture=camera" /> -->
+                </div>
+
+                <div class="forPC popup">
+                    <div class="bg">
+                        <img src="asset/img/popup/forPC/bg.png" />
+                    </div>
+                    <div class="popup-x-button"></div>
+                </div>
+
+            </div>
+            
+
+
+        </div>
+
+        <!-- content -->
+        <div class="content">
+            <!-- header -->
+            <header>
+                <div class="header-box">
+
+                </div>
+            </header>
+
+            <section class="section sec1">
+                <div class="bg">
+                    <img class="pc" src="asset/img/pc/pc-section1.png"/>
+                    <img class="mo" src="asset/img/section1/bg.png"/>
+                </div>
+
+                <div class="event-join-button">
+                    <img src="asset/img/section1/event-join-button.png" />
+                </div>
+                
+                <div class="scroll-bottom-arrow">
+                    <img src="asset/img/section1/scroll-bottom-arrow.png" />
+                </div>
+            </section>
+            
+            <section class="section sec2">
+                <div class="bg">
+                    <img class="pc" src="asset/img/pc/pc-section2.png"/>
+                    <img class="mo" src="asset/img/section2/bg.png"/>
+                </div>
+                
+                <div class="video-cover">
+                    <img src="asset/img/section2/video-cover.png" />
+                </div>
+                <div id="player" class="iframe_div">
+                    <iframe class="youtubeVideo" src="https://www.youtube.com/embed/P2KGU4abhpI?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="1"></iframe>
+                </div>
+            </section>
+            
+            <section class="section sec3">
+                <div class="bg">
+                    <img class="pc" src="asset/img/pc/pc-section3.png"/>
+                    <img class="mo" src="asset/img/section3/bg.png"/>
+                </div>
+                
+                <div class="miracle-join-button">
+                    <img src="asset/img/section3/miracle-join-button.png" />
+                </div>
+            </section>
+            
+            <section class="section sec4">
+                <div class="bg">
+                    <img class="pc" src="asset/img/pc/pc-section4.png"/>
+                    <img class="mo" src="asset/img/section4/bg.png"/>
+                </div>
+            </section>
+            
+            <section class="section sec5">
+                <div class="bg">
+                    <img class="pc" src="asset/img/pc/pc-section5.png"/>
+                    <img class="mo" src="asset/img/section5/bg.png"/>
+                </div>
+
+                <div class="button-box">
+
+                    <div class="instagram-button">
+                        <img src="asset/img/section5/instagram-button.png" />
+                    </div>
+
+                    <div class="facebook-button">
+                        <img src="asset/img/section5/facebook-button.png" />
+                    </div>
+
+                </div>
+            </section>
+            
+            <section class="section sec6">
+                <div class="bg">
+                    <img class="pc" src="asset/img/pc/pc-section6.png"/>
+                    <img class="mo" src="asset/img/section6/bg.png"/>
+                </div>
+
+                <div class="gallery-img-area">
+                    <div class="swiper gallery-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="asset/img/1.png" /></div>
+                            <div class="swiper-slide"><img src="asset/img/2.png" /></div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev gallery-prev"><img src="asset/img/btn-left.png"/></div>
+                    <div class="swiper-button-next gallery-next"><img src="asset/img/btn-right.png"/></div>
+                    <div class="swiper-pagination gallery-page"></div>
+                </div>
+
+                <div class="erba-join-button">
+                    <img src="asset/img/section6/erba-join-button.png" />
+                </div>
+            </section>
+
+            <!-- footer -->
+            <footer>
+                <div class="bg">
+                    <img class="pc" src="asset/img/pc/pc-footer.png" />
+                    <img class="mo" src="asset/img/footer/bg.png" />
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script type="text/javascript" src="asset/js/main.js"></script>
+    <script type="text/javascript" src="asset/js/compressor.js"></script>
+    
+</body>
+</html>

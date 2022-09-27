@@ -1,0 +1,151 @@
+
+<!DOCTYPE HTML>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title> jQuery </title>
+		<link rel="stylesheet" type="text/css" href="./common/css/reset.css">
+		<script type="text/javascript" src="./common/js/jquery.min.js"></script>
+
+		<!-- 스타일 -->
+		<style type="text/css">
+		/* reset */
+		body { background:#e9e9e9; }
+		img, area { outline:none; cursor:default; }
+		h1 { padding:10px 0; font-size:28px; font-weight:bold; color:#000; }
+		h1 span { font-size:20px; font-weight:normal; }
+
+		#wrap { position:relative; margin:0 auto; padding:10px; width:738px; font-family:'hw'; background:#fff; box-shadow:2px 2px 2px #666; -webkit-box-shadow:2px 2px 2px #666; }
+		#wrap p.info { position:absolute; right:10px; top:30px; font-size:12px; color:#000; }
+		#wrap p.info span { font-weight:bold; }
+		.game_wrap { position:relative; margin-bottom:10px; width:738px; height:482px; }
+		.game_left { position:relative; float:left; width:369px; }
+		.game_right { position:relative; float:right; width:369px; }
+		.game_wrap div.start { position:absolute; left:50%; top:50%; margin:-50px 0 0 -50px; width:100px; height:100px; line-height:100px; border-radius:50%; background:#f00; font-size:24px; font-weight:bold; text-align:center; color:#fff; cursor:pointer; z-index:10; }
+		.game_wrap div.dimm { position:absolute; left:0; top:0; width:100%; height:100%; z-index:9; background:#000; opacity:0.9; filter:alpha(opacity=90); }
+
+		.ck { position:absolute; width:50px; height:50px; border:2px solid #f00; border-radius:50%; display:none; }
+		.ck1 { top:121px; }
+		.ck2 { top:221px; }
+		.ck3 { top:351px; width:100px; height:100px; }
+		.ck4 { top:270px; }
+		.ck5 { top:252px; }
+
+		.game_left .ck1 { left:18px; }
+		.game_left .ck2 { left:90px; }
+		.game_left .ck3 { left:60px; }
+		.game_left .ck4 { left:205px; }
+		.game_left .ck5 { left:33px; }
+
+		.game_right .ck1 { left:30px; }
+		.game_right .ck2 { left:102px; }
+		.game_right .ck3 { left:72px; }
+		.game_right .ck4 { left:217px; }
+		.game_right .ck5 { left:45px; }
+
+		.status_bar { position:relative; width:738px; height:15px; background:#eee; border-radius:5px; -webkit-border-radius:5px; overflow:hidden; }
+		.status_bar div.gage { position:absolute; left:0; top:0; width:0; height:15px; background:#000; }
+		.success, .fail { position:absolute; left:50%; top:50%; margin:-50px 0 0 -50px; width:100px; height:100px; line-height:100px; border:2px solid #000; background:#fff; font-size:24px; font-weight:bold; text-align:center; color:#000; display:none; border-radius:5px; -webkit-border-radius:5px; }
+		</style>
+		<!-- // 스타일 -->
+
+	</head>
+	<body>
+
+		<a href="../index.html" class="home">Home</a>
+		<div id="wrap">
+			<h1>틀린그림찾기 <span></span></h1>
+			<p class="info">※ 제한시간 15초안에 틀린그림<span>(총 5개)</span>을 다 찾아야 성공합니다.</p>
+			<div class="game_wrap">
+				<div class="game_left">
+					<img src="images/img01.jpg" usemap="#map1" alt="틀린그림찾기 그림1" />
+					<div class="ck ck1"></div>
+					<div class="ck ck2"></div>
+					<div class="ck ck3"></div>
+					<div class="ck ck4"></div>
+					<div class="ck ck5"></div>
+				</div>
+				<div class="game_right">
+					<img src="images/img02.jpg" usemap="#map2" alt="틀린그림찾기 그림2" />
+					<div class="ck ck1"></div>
+					<div class="ck ck2"></div>
+					<div class="ck ck3"></div>
+					<div class="ck ck4"></div>
+					<div class="ck ck5"></div>
+				</div>
+				<div class="dimm"></div>
+				<div class="start">START</div>
+				<div class="success">성공!</div>
+				<div class="fail">실패!</div>
+			</div>
+			<div class="status_bar">
+				<div class="gage"></div>
+			</div>
+			<map name="map1" id="map1">
+				<area shape="poly" coords="47,139,53,145,51,157,40,156,37,147,41,139" href="" alt="별" />
+				<area shape="poly" coords="124,228,129,236,129,247,132,256,126,269,114,269,107,261,101,248,101,236,110,228,118,225" href="" alt="등불" />
+				<area shape="poly" coords="5,413,16,409,31,411,49,411,59,411,71,395,81,396,94,376,126,359,149,368,152,357,170,360,177,370,175,383,164,386,164,396,158,405,147,412,140,419,130,427,136,432,147,437,150,447,148,452,137,449,122,449,110,450,85,447,67,444,49,441,19,432,7,426,5,420" href="" alt="사람" />
+				<area shape="poly" coords="210,283,211,283,245,280,244,309,242,312,212,310,210,286" href="" alt="나무 옆 빌딩" />
+				<area shape="poly" coords="62,252,75,254,82,271,69,287,48,282,48,260" href="" alt="빌딩 불빛" />
+			</map>
+			<map name="map2" id="map2">
+				<area shape="poly" coords="60,137,64,141,64,147,60,153,49,145,53,138" href="" alt="별" />
+				<area shape="poly" coords="122,226,134,227,138,237,142,248,142,261,131,267,120,268,111,259,109,248,111,232,114,230" href="" alt="등불" />
+				<area shape="poly" coords="17,408,49,411,65,411,75,397,89,393,109,374,132,357,156,367,166,354,183,363,183,382,171,386,169,399,159,405,151,421,140,428,156,437,159,445,155,452,134,450,95,449,67,445,36,437,11,428,10,414" href="" alt="사람" />
+				<area shape="poly" coords="210,283,211,283,245,280,244,309,242,312,212,310,210,286" href="" alt="나무 옆 빌딩" />
+				<area shape="poly" coords="62,252,75,254,82,271,69,287,48,282,48,260" href="" alt="빌딩 불빛" />
+			</map>
+		</div>
+		<!-- // wrap -->
+
+		<!-- 스크립트 -->
+		<script type="text/javascript">
+		// 게임 시작 버튼
+		$('.game_wrap div.start').on('click', function(){
+			var gTime = 15000;
+			$('.game_wrap div.start, .game_wrap div.dimm, #wrap p.info').fadeOut('fast');
+			$('.status_bar div.gage').animate({'width':'100%'}, gTime);
+
+			// 15초안에 못찾으면 실패!
+			setTimeout(function(){
+				if($('.ck1').css('display')=='none' || $('.ck2').css('display')=='none' || $('.ck3').css('display')=='none' || $('.ck4').css('display')=='none' || $('.ck5').css('display')=='none'){
+					$('.fail').show();
+				}
+			}, gTime);
+		});
+
+		// 틀린 부분 클릭 이벤트
+		$('#map1 area').on('click', function(){
+			var idx = $('#map1 area').index(this);
+			if(idx==0) $('.ck1').show();
+			if(idx==1) $('.ck2').show();
+			if(idx==2) $('.ck3').show();
+			if(idx==3) $('.ck4').show();
+			if(idx==4) $('.ck5').show();
+			success();
+			return false;
+		});
+		$('#map2 area').on('click', function(){
+			var idx = $('#map2 area').index(this);
+			if(idx==0) $('.ck1').show();
+			if(idx==1) $('.ck2').show();
+			if(idx==2) $('.ck3').show();
+			if(idx==3) $('.ck4').show();
+			if(idx==4) $('.ck5').show();
+			success();
+			return false;
+		});
+
+		// 성공 함수
+		function success(){
+			if($('.ck1').css('display')=='block' && $('.ck2').css('display')=='block' && $('.ck3').css('display')=='block' && $('.ck4').css('display')=='block' && $('.ck5').css('display')=='block'){
+				$('.status_bar div.gage').stop();
+				$('.success').show();
+			}
+		}
+		</script>
+		<!-- // 스크립트 -->
+
+	</body>
+</html>

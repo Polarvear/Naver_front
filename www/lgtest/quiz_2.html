@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <!-- @@include('./common/head.html', {
+        pageCSS: ["BMC/BMC"]
+    }) -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-TextLayoutMetrics" content="gdi" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <!-- 210310_SEO수정 -->
+    <meta name="description" content="@@pageDesc">
+    <title>@@pageTitle</title>
+
+    <link rel="stylesheet" href="./css/reset.min.css" />
+    <link rel="stylesheet" href="./css/app.min.css" />
+    <link rel="stylesheet" href="./css/pages/BMC/BMC.min.css" />
+        
+    <script src="./lg5-common/js/libs/jquery-2.2.4.min.js"></script>
+    <script src="./lg5-common/js/libs/jquery.transit.min.js"></script>
+    <script src="./lg5-common/js/libs/jquery.event.move.min.js"></script>
+    <script src="./lg5-common/js/libs/jquery.twentytwenty.min.js"></script>
+    
+    <script src="./lg5-common/js/vcui.min.js"></script>
+    <script src="./lg5-common/js/vcui.common-ui.min.js"></script>
+    <script src="./lg5-common/js/lg.common.min.js"></script>
+
+    
+    <!-- s: event 2021-06-23 -->
+    <link rel="stylesheet" href="kr/event/2021/06/02_hsad/css/secretEvent.css" />
+    <script src="kr/event/2021/06/02_hsad/js/secretEvent.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 210311_H1추가 -->
+        <!-- @@include('./common/header.html', {
+            hiddenTitle: "기획전"
+        }) -->
+        <!-- //210311_H1추가 -->
+
+        <main class="container">
+            <!-- event -->
+            <!-- 2021.2.10 data-cart-url, data-sibling-url 추가-->
+            <div class="contents event exhibition"
+                data-cart-url="/lg5-common/data-ajax/KRP0007/plpCart.json"
+                data-sibling-url="/lg5-common/data-ajax/KRP0007/retrieveSiblingProductInfo.json"
+            ><!-- 210126 수정 - .exhibition 추가 -->
+                <div class="cont-wrap">
+                    <div class="ev-detail-wrap">
+
+                        <div class="ev-detail-top">
+                            <div class="top-inner">
+                                <div class="tit-wrap">
+                                    <p class="tit"><span class="blind">제목</span>메인 제목!</p>
+                                    <span class="sub-tit"><span class="blind">서브 제목</span>서브 제목!</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ev-detail-con"><!-- 210329 수정 [종료된 기획전 .finish 클래스 추가] -->
+                            <div class="ev-cont">
+                                <div class="conts">
+                                    <div class="event_wrap">
+                                        <div class="section01">
+                                            <div class="inner">
+                                                <div>
+                                                    <img src="kr/images/event/2021/06/02_hsad/quiz/quiz_02.jpg"  width="100%" class="pc" alt="">
+                                                    <img src="kr/images/event/2021/06/02_hsad/quiz/quiz_02.jpg" class="mobile" alt="">
+                                                    <div class="answer-input">
+                                                        <div class="radio">
+                                                            <input id="radio-1" name="radio" type="radio">
+                                                            <label for="radio-1" class="radio-label">①모음컬렉션</label>
+                                                          </div>
+                                                        
+                                                          <div class="radio">
+                                                            <input id="radio-2" name="radio" type="radio">
+                                                            <label  for="radio-2" class="radio-label">②마인컬렉션</label>
+                                                          </div>
+                                                        
+                                                          <div class="radio">
+                                                            <input id="radio-3" name="radio" type="radio"   >
+                                                            <label for="radio-3" class="radio-label">③마이컬렉션</label>
+                                                          </div>
+                                                    </div>
+                                                    <div class="btns q02">
+                                                        <a href="javascript:;"><span class="blind">정답 응모 하기</span></a>
+                                                    </div>
+                                                </div> 
+                                                <div class="blind">
+                                                    <h2>쉿!크릿 퀴즈</h2>
+                                                    <p>LGE.COM앱에서 취향 맞춤 큐레이션을 경험 할 수 있도록 다양한 나만의 컬렉션 컨텐츠를 담을 수 있는 기능은?</p>
+                                                    <strong>ㅁㅇㅋㄹㅅ</strong>
+                                                    <p>베스킨라빈스 파인트(200명)</p>
+                                                    <dl>
+                                                        <dt>쉿크릿 퀴즈 2차 정답을 체크하여 응모하세요!</dt>
+                                                        <dd>1. 모음컬렉션</dd> 
+                                                        <dd>2. 마인컬렉션</dd> 
+                                                        <dd>3. 마이컬렉션</dd> 
+                                                    </dl>
+                                                    <p>퀴즈 정답 체크 후, 경품 수령을 위한 동의 절차까지 완료해야 이벤트에 응모됩니다.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ev-detail-bottom">
+                            <!-- 210105 수정 -->
+                            <div class="btn-wrap">
+                                <a href="#n" class="btn border"><span>목록</span></a>
+                                <a href="#n" class="btn"><span>이메일 문의</span></a>
+                            </div>
+                            <!-- //210105 수정 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // event -->
+        </main>
+
+        @@include('./common/footer.html')
+    </div>
+    <article id="popupsecretEvent" class="popup-wrap full">
+        <header class="pop-header">
+            <h1 class="tit"><span>이벤트 참여하기</span></h1>
+        </header>
+                               
+        <section class="pop-conts academy-pop">
+            <div class="input-info">
+                <div class="input-info-wrap" id="agree1_f">
+                    <div class="tit-wrap">
+                        <h2 class="h2-tit">개인정보 수집 이용 및 처리 위탁 동의</h2>
+                    </div>
+                    <p class="tb-tit req">개인정보 수집 이용 동의(필수)<span class="blind">필수</span></p>
+                    <div class="tb_row tb-bor">
+                        <table>
+                            <caption>개인정보 수집 이용 동의 항목, 목적, 보유기간 안내</caption>
+                            <colgroup>
+                                <col width="28%">
+                                <col width="32%">
+                                <col width="">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">수집항목</th>
+                                    <th scope="col">목적</th>
+                                    <th scope="col">보유기간</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="al-left">이름/연락처</td>
+                                    <td class="al-left">이벤트 응모내역 확인 시 본인 확인</td>
+                                    <td class="al-left" rowspan="2">이벤트 종료일로부터 90일까지 보유후 파기</td>
+                                </tr>
+                                <tr>
+                                    <td class="al-left">당첨자 이름<br>당첨자 연락처</td>
+                                    <td class="al-left">경품 배송 시 본인 확인</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="bullet-list">
+                        <li class="b-txt">귀하께서는 본 동의를 거절하실 수 있습니다. 단, 거절하신 경우 이벤트 참여가 제한될 수 있습니다.</li>
+                        <li class="b-txt">14세 미만 고객의 경우, 이벤트 참여가 제한됩니다.</li>
+                    </ul>
+                    <div class="agree-input">
+                        <span class="rdo-wrap">
+                            <input type="radio" id="chk1-1" name="rdo1">
+                            <label for="chk1-1">동의합니다</label>
+                        </span>
+                        <span class="rdo-wrap">
+                            <input type="radio" id="chk1-2" name="rdo1">
+                            <label for="chk1-2">동의하지 않습니다</label>
+                        </span>
+                                                      
+                    </div>
+                    <div class="input-info-wrap" id="agree2_f">
+                        <p class="tb-tit req">개인정보 처리 위탁 동의(필수)<span class="blind">필수</span></p>
+                        <div class="tb_row tb-bor">
+                            <table>
+                                <caption>개인정보 처리 위탁 동의 수탁자, 목적 안내</caption>
+                                <colgroup>
+                                    <col width="33.3%">
+                                    <col width="">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">수탁자</th>
+                                        <th scope="col">목적</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>HSAd,(주)LG CNS</td>
+                                        <td>사은품 제공 등 이벤트 관련 업무</td>                                    
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <ul class="bullet-list">
+                            <li class="b-txt">경품 제공 등 이벤트 진행을 위한 개인정보 처리 위탁에 동의하셔야 이벤트 참여가 가능합니다.</li>
+                        </ul>
+                        <div class="agree-input">
+                            <span class="rdo-wrap">
+                                <input type="radio" id="chk2-1" name="rdo2">
+                                <label for="chk2-1">동의합니다</label>
+                            </span>
+                            <span class="rdo-wrap">
+                                <input type="radio" id="chk2-2" name="rdo2">
+                                <label for="chk2-2">동의하지 않습니다</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-wrap">
+                    <dl class="forms">
+                        <dt class="tit"><label for="buyerName">이름</label></dt>
+                        <dd class="conts">
+                            <span class="input-wrap">
+                                <input type="text" class="disabled" name="name" value="" data-required="true" id="name" placeholder="이름을 입력해 주세요." readonly="">
+                            </span>
+                        </dd>
+                    </dl>
+                    <dl class="forms">
+                        <dt class="tit">
+                            <label for="buyerPhone">휴대폰 번호</label>
+                        </dt>
+                        <dd class="conts">
+                            <div class="input-wrap">
+                                <input type="number" class="disabled" name="phone" data-required="true" id="phone" value="" placeholder="‘-’없이 번호만 입력해 주세요." readonly="">
+                            </div>
+                        </dd>
+                    </dl>
+                </div>                           
+            </div>
+        </section>
+        <footer class="pop-footer center" ui-modules="Footer">
+            <div class="btn-group">
+                <button type="button" class="btn pink"><span>응모 완료</span></button>
+            </div>
+        </footer>
+        <button type="button" class="btn-close ui_modal_close"><span class="blind">닫기</span></button>
+    </article>    
+</body>
+</html>

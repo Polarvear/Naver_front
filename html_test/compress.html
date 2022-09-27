@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<script src="compressor.js"></script>
+
+
+</head>
+<body>
+
+<div style="margin-top:50px">
+    <input id="imageFile" type="file">
+</div>
+<div style="margin-top:50px">
+    <input type="button" value="Resize Image" onclick="ResizeImage()"/>
+</div>
+<div style="margin-top:50px">
+    <img src="" id="output" style="width:100%">
+</div>
+
+
+
+<script language = "javascript">
+
+    const filesToUpload = document.getElementById('imageFile');
+    let selectedFile = '';
+    let compress_img = '';
+
+        
+     // 문서내에 img 객체를 생성합니다
+     var img = document.createElement("img");
+     // 파일을 읽을 수 있는 File Reader 를 생성합니다
+     var reader = new FileReader();
+    
+    function ResizeImage() { 
+        new Compressor(selectedFile, options);
+        // document.getElementById('output').src = URL.createObjectURL(compress_img);
+    }
+    
+    filesToUpload.onchange = () => {
+        selectedFile = filesToUpload.files[0];
+    };
+
+    const options = {
+        quality: 0.8,
+        success: function (result) {
+            if (result.size > 5*1024*1024) { // 리사이징 했는데도 용량이 큰 경우
+                alert('파일 용량이 초과되어 업로드가 불가 합니다.');
+                return;
+            }
+            // console.log('Output: ', result);
+            console.log(new File([result], result.name, { type: result.type }));
+
+            const _URL = window.URL || window.webkitURL;
+            if (_URL) {
+                document.getElementById('output').src = _URL.createObjectURL(result);
+            }
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    };
+
+    
+
+    </script>
+</body>
+</html>
+
+
+<!--refer : https://doolyit.tistory.com/182-->

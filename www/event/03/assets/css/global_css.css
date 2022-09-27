@@ -1,0 +1,205 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+body {
+  font-family: "Nanum Gothic", sans-serif;
+  background-color: #f5f5f5;
+}
+
+.title {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.title-text {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+@media (max-width: 992px) {
+  .title-text {
+    font-size: 20px;
+  }
+}
+
+.content {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@media (max-width: 1200px) {
+  .content {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+/*@media (max-width: 1200px) {
+  .event-img {
+    width:100%;
+  }
+}*/
+
+.comment-title {
+  padding-left: 0px;
+  padding-right: 0px;
+  font-size: 13px;
+}
+
+.content-text {
+  margin-top:50px;
+  margin-bottom: 50px;
+}
+
+.participate-box {
+  border: 1px solid #dddddd;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.participate-explain {
+  line-height: 1.7em;
+}
+
+.participate-explain-2 {
+  line-height: 1.7em;
+  font-weight: bold;
+}
+
+.participate-detail {
+  line-height: 1.7em;
+  margin-bottom: 30px;
+}
+
+.blog-hint-btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.participate-title {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+  color: blue;
+}
+
+#privacy_agreement1 {
+  vertical-align: -3px;
+}
+
+#private_agree {
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.comment-form-text {
+  font-size: 15px;
+  color: red;
+  text-decoration: underline;
+}
+
+.comment-section {
+  margin-top:50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@media (max-width: 992px) {
+  .comment-section {
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+.comment-content {
+  padding-right: 0px !important;
+}
+
+@media (max-width: 992px) {
+  .comment-content {
+    padding-left: 0px !important;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .comment-content-m {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    margin-bottom: 10px;
+  }
+}
+.comment-box {
+  width: 100%;
+}
+
+.participant_name {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.participant_company {
+  margin-bottom: 10px;
+}
+
+
+.pw-confirm-btn {
+  background-color: #ffcc00;
+  border: 0px;
+  padding: 3px 10px 3px 10px;
+}
+
+.modify-comment-box {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.submit-btn {
+  background-color: #ffcc00;
+  border: 0px;
+  padding: 10px 30px 10px 30px;
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.modify-box {
+  margin-top: 20px;
+}
+
+.modify-form-group {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.footer {
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+.footer-img {
+  width:100%;
+}
+
+li.page {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.paging {
+    text-align: center;
+}
+
+
+input.error, textarea.error{
+  border:1px dashed red;
+}
+label.error{
+  display:block;
+  color:red;
+}

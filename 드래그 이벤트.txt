@@ -1,0 +1,40 @@
+  // ji code start
+
+  // target node div.list_box
+
+  /*
+  	target node's parent
+  	parentElement: div#_ajaxlist.list-wrap
+	parentNode: div#_ajaxlist.list-wrap
+
+	사용할 것
+	nextSibling
+	previousSibling
+ */
+  const listBox = document.querySelector('.list_box');
+  console.log('listBox:::::::', listBox);
+
+  let picked = null;
+
+  listBox.addEventListener('dragstart', (e) => {
+	picked = e.target;
+	const obj = e.target;
+	console.log('---------------');
+	console.log({ obj });
+	console.log('---------------');
+	picked = e.target;
+	 //console.log('이벤트 확인', e);
+
+  }, false);
+
+  listBox.addEventListener('dragover', (e) => {
+	e.preventDefault();// 이미 있는 이벤트의 전파방지
+	//console.log(e);
+  }, false);
+
+  listBox.addEventListener('drop', (e) => {
+	console.log('e::::::::::', e);
+	console.log('target:::::::::', e.target.before(picked));
+	e.target.before(picked);
+  }, false);
+  
