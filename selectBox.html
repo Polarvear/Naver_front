@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        select::-ms-expand { 
+	        display: none;
+        }
+        .select {
+          -o-appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          overflow: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="selectBox">
+        <span class="icoArrow"><img src="" alt=""></span>
+
+        <select name="fruits" class="select">
+            <option disabled selected>fruits</option>
+            <option value="apple">apple</option>
+            <option value="orange">orange</option>
+            <option value="grape">grape</option>
+            <option value="melon">melon</option>
+        </select>
+    </div>
+
+    <div style="height:100px"></div>
+<style>
+    select {
+        width: 500px;
+        text-align: right;
+    }
+    .selectBox {
+        height: 30px;
+        /* border: 1px solid blue; */
+        width: 164px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+    }
+    .icoArrow {
+        pointer-events: none; /*중요*/
+        box-sizing: border-box;
+        width: 100%;
+        
+        padding: 5px;
+        background-origin: content-box;
+        /* background-size: cover; */
+        flex: 1;
+        background-repeat: no-repeat;
+        position: absolute;
+        background-image: url(../down-arrow.png);
+        border-right: 1px solid red;
+        width: 50px;
+    }
+</style>
+    <div class="selectBox">
+        
+
+        <select name="fruits" class="select">
+            <div class="icoArrow"><img src="" alt=""></div>
+            <option disabled selected>fruits</option>
+            <option value="apple">apple</option>
+            <option value="orange">orange</option>
+            <option value="grape">grape</option>
+            <option value="melon">melon</option>
+        </select>
+    </div>
+
+
+    <select name="fruits" class="select">
+        <div class="icoArrow"><img src="" alt=""></div>
+        <option disabled selected>fruits</option>
+        <option value="apple">apple</option>
+        <option value="orange">orange</option>
+        <option value="grape">grape</option>
+        <option value="melon">melon</option>
+    </select>
+
+</body>
+</html>

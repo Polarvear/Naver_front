@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<script src="compressor.js"></script>
+
+
+</head>
+<style>
+
+</style>
+<body>
+
+<canvas id="myCanvas" width="2048px" height="2048px">
+
+</canvas>
+
+<div style="margin-top:50px">
+    <input id="imageFile" type="file" type="reset">
+</div>
+<div style="margin-top:50px">
+    <input type="button" value="Resize Image" id="resize"/>
+</div>
+<div style="margin-top:50px">
+    <img src="" id="output" style="width:100%">
+</div>
+<div style="margin-top:50px">
+    <input type="button" value="toCanvas" type="reset" id="toCanvas"/>
+</div>
+
+
+
+
+<script language = "javascript">
+    
+    const resizeBtn = document.querySelector('#resize')
+    resizeBtn.addEventListener('click', function ResizeImage() {
+        new Compressor(selectedFile, options);
+    },false)
+
+    const toCanvas = document.querySelector('#toCanvas')
+
+    toCanvas.addEventListener('click', function toCanvas() {
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d", { alpha: true });
+        console.log('ctx::::::::::', ctx);
+        var img = document.getElementById("output");
+        // if 문 돌려서 여기서 처리해주면 될 듯
+        console.log('imgWidht::::::', img.offsetWidth);
+        console.log('imgHeight::::::', img.offsetHeight);
+
+        
+        let iw, ih; // offsetWidth 나 width는 안바뀌는 속성이라서 변수에 담아주고 바궈야함
+        // 즉 img.offsetWidth = 100; <= 이렇게 해도 안먹힘 그래서 변수 생성 후 거기다가 2048을 넣어줌 
+
+        if (img.offsetWidth >= img.offsetHeight) {
+            iw = 2048;
+            ih = img.offsetHeight / (img.offsetWidth / iw);
+        } else {
+            ih = 2048;
+            iw = img.offsetWidth / (img.offsetHeight / ih);
+        }
+
+        console.log('ifWidth입니다::::::', iw); // 바뀜
+        console.log('ifHeight입니다:::::::::', ih);
+
+        const x = (c.width - iw)/2;
+        const y = (c.height - ih)/2;
+
+        //clear 기능
+        ctx.clearRect(0, 0, c.width, c.height);
+        ctx.drawImage(img, x, y, iw, ih);
+    });
+    
+
+
+
+    const filesToUpload = document.getElementById('imageFile');
+    let selectedFile = '';
+    let compress_img = '';
+
+        
+     // 문서내에 img 객체를 생성합니다
+     var img = document.createElement("img");
+     console.log("imgWidth::::::::::", img.width);
+     console.log("imgHeight::::::::::", img.height);
+     // 파일을 읽을 수 있는 File Reader 를 생성합니다
+     var reader = new FileReader();
+    
+    filesToUpload.onchange = () => {
+        selectedFile = filesToUpload.files[0];
+    };
+
+    const options = {
+        quality: 0.8,
+        success: function (result) {
+            //convertImgToCanvas();
+            if (result.size > 5*1024*1024) { // 리사이징 했는데도 용량이 큰 경우
+                alert('파일 용량이 초과되어 업로드가 불가 합니다.');
+                return;
+            }
+            // console.log('Output: ', result);
+            console.log(new File([result], result.name, { type: result.type }));
+            console.log('width::::::::', File.width);
+
+            const _URL = window.URL || window.webkitURL;
+            if (_URL) {
+                document.getElementById('output').src = _URL.createObjectURL(result);
+                
+            }
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    };
+
+
+</script>
+</body>
+</html>
+
+
+<!--refer : https://doolyit.tistory.com/182-->

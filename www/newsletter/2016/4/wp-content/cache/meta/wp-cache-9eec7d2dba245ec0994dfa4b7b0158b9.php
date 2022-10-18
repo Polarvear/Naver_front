@@ -1,0 +1,1 @@
+<?php die(); ?>{"headers":{"Content-Encoding":"Content-Encoding: gzip","Vary":"Vary: Accept-Encoding, Cookie","Last-Modified":"Last-Modified: Wed, 30 Mar 2016 02:13:32 GMT","Content-Type":"Content-Type: text\/html; charset=\"UTF-8\""},"uri":"dhlkorea.com\/newsletter\/","blog_id":1,"post":0,"key":"dhlkorea.com80\/newsletter\/gzip98119c8b6d0c9a4dc509189bf9e6a287"}

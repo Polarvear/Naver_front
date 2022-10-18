@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            margin: 0;
+        }
+        .big {
+            width: 100%;
+            height: 500px;
+            background: #fff;
+        }
+        .big2 {
+            width: 100%;
+            height: 600px;
+            background: #aaa;
+        }
+        .box {
+            width: 70%;
+            height: 500px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            background-image: url(./assets/img/waste/img_01.png);
+            background-size: contain;
+        }
+        .ccc {
+            display: flex;
+
+            flex-direction: column;
+            width: 92%;
+            height: 100%;
+        }
+        .aaa {
+            display: flex;
+            justify-content: space-between;
+        }
+        .aaa:last-child {
+            margin-top: auto;
+        }
+        .bbb {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            width: 15%;
+            height: 200px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="big"></div>
+    <div class="big2">
+        <div class="box">
+            <div class="ccc">
+                <div class="aaa">
+                    <div class="bbb">abc</div>
+                    <div class="bbb">abc</div>
+                    <div class="bbb">abc</div>
+                    <div class="bbb">abc</div>
+                </div>
+                <div class="aaa">
+                    <div class="bbb">bbb</div>
+                    <div class="bbb">bbb</div>
+                    <div class="bbb">bbb</div>
+                    <div class="bbb">bbb</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

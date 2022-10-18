@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    ul {
+        display: flex;
+        list-style:none;
+        background-color: darkolivegreen;
+    }
+
+    li {
+        margin-right: 5px;
+        position: relative;
+        width : 20px;
+        height: 20px;
+        background-color: #f5d682;
+        border: 1px solid red;
+    }
+
+
+
+</style>
+<body>
+    <ul class="list">
+        <li class="item" draggable="true">A</li>
+        <li class="item" draggable="true">B</li>
+        <li class="item" draggable="true">C</li>
+        <li class="item" draggable="true">D</li>
+        <li class="item" draggable="true">E</li>
+        <li class="item" draggable="true">F</li>
+    </ul>
+
+<script>
+    const list = document.querySelector('.list');
+
+    let picked = null;
+    let pickedIndex = null;
+
+    list.addEventListener('dragstart', (e) => {
+        let obj = e.target;
+        let pickedIndex = null;
+        pickedIndex = [...obj.parentNode.children].indexOf(obj);
+        // console.log({ obj });
+        picked = obj;
+        console.log('e::::', e);
+    });
+    
+    list.addEventListener('dragover', (e) => {
+        e.preventDefault(); // 기본설계 전파방지해서 drop 이벤트 발생시킴
+    });
+
+    list.addEventListener('drop', (e) => {
+        const obj = e.target;
+        const index = [...obj.parentNode.children].indexOf(obj);
+
+        index > pickedIndex ? obj.after(picked) : obj.before(picked);
+        
+    });
+
+</script>
+
+</body>
+</html>

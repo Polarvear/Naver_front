@@ -1,0 +1,18 @@
+https://dnehdwjd.cafe24.com/yc5/shop/partner/login.php 
+
+form 형식은 ajax 없을 때도 전송가능 
+
+ajax 는 비동기형식이라는 걸 기억해야함
+
+기본적인 건 form입장에서는 보낼 수 있지만. 비동기는 ajax다
+
+API는 메인 index에 include 시키는 역할임 PDO 정호가하지 않음
+
+2048 * 2048
+
+이미지 canvas 로 올리기
+Compress.js 사용
+
+
+사용자가 이미지가 입력을 하면 서버에 넣지않고 화면 상에서만 보여줌 서버단으로 sql 문 쓸 필요가 없다. => 잇는 경우 사용자가 누가 들어왔는지 접속자수 체크 or 에이스침대에서 접속자수 확인 하는 용도 정도
+인스타로 추첨하는 거 => db쪽은 간단하다. 

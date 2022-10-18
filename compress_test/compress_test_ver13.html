@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" id="file" accept="image/*">
+
+
+
+
+
+
+
+
+
+<script type="module">
+import axios from '/axios';
+import Compressor from '/.bin/compressorjs';
+
+
+
+document.getElementById('file').addEventListener('change', (e) => {
+  const file = e.target.files[0];
+
+  if (!file) {
+    return;
+  }
+
+  new Compressor(file, {
+    quality: 0.6,
+
+    // The compression process is asynchronous,
+    // which means you have to access the `result` in the `success` hook function.
+    success(result) {
+      const formData = new FormData();
+
+      // The third parameter is required for server
+      formData.append('file', result, result.name);
+
+      // Send the compressed image file to server with XMLHttpRequest.
+      axios.post('/upload', formData)
+      .then(() => {
+        console.log('Upload success');
+      });
+    },
+    error(err) {
+      console.log(err.message);
+    },
+  });
+  
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+.event_wrap .pc {display: inline-block;}
+.event_wrap .mobile {display: none;}
+.event_warp .hidden {display: none;}
+.event_warp .on {display: inline;}
+
+.event_wrap .section03 .btn-wrap {position:relative;}
+.event_wrap .section03 .btn-wrap .b01 a{position: absolute;left: 35.347826%;top: 70%;width: 29.304348%;height: 9%;}
+
+.event_wrap .section04 .btn-wrap {position:relative;}
+.event_wrap .section04 .btn-wrap .b02 a{position: absolute;left: 35.347826%;top: 70%;width: 29.304348%;height: 9%;}
+
+.event_wrap .section05 .btn-wrap {position:relative;}
+.event_wrap .section05 .btn-wrap .b03 a{position: absolute;left: 35.347826%;top: 65%;width: 29.304348%;height: 9%;}
+
+.event_wrap .section06 .btn-wrap {position:relative;}
+.event_wrap .section06 .btn-wrap .b04 a{position: absolute;left: 35.347826%;top: 60%;width: 29.304348%;height: 9%;}
+
+@media screen and (max-width: 767px) {
+    .event_wrap .mobile {display: inline-block !important;}
+    .event_wrap .pc {display: none !important;}
+    .event_wrap .section03 .btn-wrap .b01 a{top: 79%;width: 56.304348%;left: 21.347826%;}
+    .event_wrap .section04 .btn-wrap .b02 a{top: 79%;width: 56.304348%;left: 21.347826%;}
+    .event_wrap .section05 .btn-wrap .b03 a{top: 78%;width: 56.304348%;left: 21.347826%;}
+    .event_wrap .section06 .btn-wrap .b04 a{top: 76%;width: 56.304348%;left: 21.347826%;}    
+}

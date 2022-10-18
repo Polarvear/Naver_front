@@ -1,0 +1,13 @@
+.comment-awaiting-moderation {
+	display: none !important;
+}
+.com_list_ol {
+	list-style-type:none;
+}
+
+.com_author {
+	color: #000;
+	font-weight: bold;
+	font-size: 15px;
+	margin-bottom:5px;
+}
